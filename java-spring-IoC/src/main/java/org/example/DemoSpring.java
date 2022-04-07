@@ -9,6 +9,8 @@ public class DemoSpring {
 
         MusicPlayer musicPlayer =  context.getBean("musicPlayerBean", MusicPlayer.class);
         musicPlayer.playMusic();
+        System.out.println(musicPlayer.getMusicPlayerModel());
+        System.out.println(musicPlayer.getMusicPlayerYear());
 
         context.close();
     }
