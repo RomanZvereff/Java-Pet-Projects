@@ -3,7 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="musicBean" class="org.example.ClassicalMusic">
+    <bean id="musicBean" class="org.example.RapMusic">
+    </bean>
+
+    <bean id="musicPlayerBean" class="org.example.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
     </bean>
 
 </beans>
