@@ -12,7 +12,7 @@
     <bean id="musicBean" class="org.example.RapMusic">
     </bean>
 
-    <bean id="musicPlayerBean" class="org.example.MusicPlayer">
+    <bean id="musicPlayerBean" class="org.example.MusicPlayer" scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="musicPlayerModel" value="${musicPlayerModel}"/>
         <property name="musicPlayerYear" value="${musicPlayerYear}"/>

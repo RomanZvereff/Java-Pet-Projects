@@ -8,9 +8,15 @@ public class DemoSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         MusicPlayer musicPlayer =  context.getBean("musicPlayerBean", MusicPlayer.class);
-        musicPlayer.playMusic();
-        System.out.println(musicPlayer.getMusicPlayerModel());
+        MusicPlayer musicPlayer2 =  context.getBean("musicPlayerBean", MusicPlayer.class);
+
+        boolean isEquals = musicPlayer == musicPlayer2;
+        System.out.println(isEquals);
+
+        musicPlayer2.setMusicPlayerYear(2022);
+
         System.out.println(musicPlayer.getMusicPlayerYear());
+        System.out.println(musicPlayer2.getMusicPlayerYear());
 
         context.close();
     }
