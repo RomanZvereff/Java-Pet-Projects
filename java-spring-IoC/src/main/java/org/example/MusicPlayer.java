@@ -1,48 +1,45 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
 
-    private Music music;
-    private String musicPlayerModel;
-    private int musicPlayerYear;
+    private Music rockMusic;
+    private Music classicalMusic;
+    private Music rapMusic;
 
     public MusicPlayer() {
     }
     @Autowired
-    public MusicPlayer(Music music) {
-        this.music = music;
+    public MusicPlayer(@Qualifier("rockMusic") Music rockMusic,
+                       @Qualifier("classicalMusic") Music classicalMusic) {
+        this.rockMusic = rockMusic;
+        this.classicalMusic = classicalMusic;
     }
 
-    public Music getMusic() {
-        return music;
+    public Music getRapMusic() {
+        return rapMusic;
     }
 
-    public void setMusic(Music music) {
-        this.music = music;
+    @Autowired
+    @Qualifier("rapMusic")
+    public void setRapMusic(Music rapMusic) {
+        this.rapMusic = rapMusic;
     }
 
-    public String getMusicPlayerModel() {
-        return musicPlayerModel;
+    public Music getRockMusic() {
+        return rockMusic;
     }
 
-    public void setMusicPlayerModel(String musicPlayerModel) {
-        this.musicPlayerModel = musicPlayerModel;
-    }
-
-    public int getMusicPlayerYear() {
-        return musicPlayerYear;
-    }
-
-    public void setMusicPlayerYear(int musicPlayerYear) {
-        this.musicPlayerYear = musicPlayerYear;
+    public Music getClassicalMusic() {
+        return classicalMusic;
     }
 
     public void playMusic() {
-        System.out.println(music.getSongName());
+        System.out.println(rockMusic.getSongName() + " " + classicalMusic.getSongName() + " " + rapMusic.getSongName());
     }
 
 }
