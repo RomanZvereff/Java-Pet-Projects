@@ -7,12 +7,8 @@ public class DemoSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        MusicPlayer musicPlayer =  context.getBean("musicPlayer", MusicPlayer.class);
-
-        Music classicalMusic = context.getBean("classicalMusic", Music.class);
-
-        musicPlayer.setMusic(classicalMusic);
-        musicPlayer.playMusic();
+        MusicService service = context.getBean("musicService", MusicService.class);
+        service.startService();
 
         context.close();
     }
