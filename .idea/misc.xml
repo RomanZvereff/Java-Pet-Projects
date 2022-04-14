@@ -3,12 +3,14 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/java-spring-first-project" />
     <file type="web" url="file://$PROJECT_DIR$/java-spring-IoC" />
+    <file type="web" url="file://$PROJECT_DIR$/java-springMVC" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/java-spring-first-project/pom.xml" />
         <option value="$PROJECT_DIR$/java-spring-IoC/pom.xml" />
+        <option value="$PROJECT_DIR$/java-springMVC/pom.xml" />
       </list>
     </option>
   </component>

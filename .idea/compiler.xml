@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java-spring-first-project" />
         <module name="java-spring-IoC" />
+        <module name="java-springMVC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-spring-first-project" target="1.7" />
       <module name="java-spring-IoC" target="1.7" />
+      <module name="java-springMVC" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

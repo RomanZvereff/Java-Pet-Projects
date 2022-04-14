@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Pet-Projects.iml" filepath="$PROJECT_DIR$/.idea/Java-Pet-Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-spring-IoC/java-spring-IoC.iml" filepath="$PROJECT_DIR$/java-spring-IoC/java-spring-IoC.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-spring-first-project/java-spring-first-project.iml" filepath="$PROJECT_DIR$/java-spring-first-project/java-spring-first-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-springMVC/java-springMVC.iml" filepath="$PROJECT_DIR$/java-springMVC/java-springMVC.iml" />
     </modules>
   </component>
 </project>
